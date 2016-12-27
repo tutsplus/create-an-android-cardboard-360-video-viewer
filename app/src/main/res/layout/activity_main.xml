@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <com.google.vr.sdk.widgets.pano.VrPanoramaView
-        android:id="@+id/pano_view"
+    <com.google.vr.sdk.widgets.video.VrVideoView
+        android:id="@+id/video_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="250dp"/>
 
-</RelativeLayout>
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_height="32dp"
+        android:layout_width="match_parent"
+        style="?android:attr/progressBarStyleHorizontal"/>
+
+    <Button
+        android:id="@+id/btn_volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volume Toggle"/>
+
+</LinearLayout>
